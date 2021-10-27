@@ -13,13 +13,6 @@ app.use(express.json());
 
 
 
-app.get('/', (req, res) => {
-    console.log('something');
-    res.send('wellcome to home page')
-});
-
-
-
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.h7sw1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 
@@ -63,6 +56,10 @@ client.connect(err => {
 
 });
 
+app.get('/', (req, res) => {
+    console.log('something');
+    res.send('welcome to home page')
+});
 
 
 app.listen(port, () => {
