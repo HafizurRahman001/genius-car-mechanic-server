@@ -61,6 +61,10 @@ app.get('/', (req, res) => {
     res.send('welcome to home page')
 });
 
+app.get('/hello', (req, res) => {
+    res.send('Hello Mr. Hafizur Rahman')
+})
+
 
 app.listen(port, () => {
     console.log('surver running on:', port);
